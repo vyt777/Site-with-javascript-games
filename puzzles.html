@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+	
+    <title>Отгадай загадки!</title>
+	
+<meta charset="utf-8">
+	
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+	
+    <div id="header">
+		
+        <a href="index.html">Главная</a> <span>/</span>
+		
+        <a href="puzzles.html">Загадки</a> <span>/</span>
+		
+        <a href="quest_num.html">Угадайка</a> <span>/</span>
+	
+    </div>
+
+	
+    <div id="content">
+		
+        <h1>Отгадай загадки!</h1>
+		
+        <div id="center">
+			
+            <meta charset="utf-8">
+
+<script>
+	
+    function checkAnswer(id, trueAnswer)
+	
+    {
+
+        var userAnswer = document.getElementById(id).value;
+
+	if (userAnswer == trueAnswer) return true;
+        else
+ return false;
+
+    }
+	
+    function checkAnswers()
+
+    {
+			
+        var goodAnswers = 0;
+        if (checkAnswer('puzzle1', 'подушка')) goodAnswers++;
+
+        if (checkAnswer('puzzle2', 'петух'))
+ goodAnswers++;
+        if (checkAnswer('puzzle3', 'индюк'))
+ goodAnswers++;
+
+        if (checkAnswer('puzzle4', 'золушка')) goodAnswers++;
+        if (goodAnswers == 0)
+ alert('Вы ничего не угадали');
+        else
+ alert('Количество правильных ответов: ' + goodAnswers);
+
+	}
+
+</script>
+
+
+
+
+    <h7>Вводите ответы прописными буквами.</h7>
+    <p><p/><br>
+
+    <p>Загадка №1: Вспушит она свои бока, Свои четыре уголка, И тебя, как ночь настанет, Все равно к себе притянет.<p/><br>
+
+    <input type="text" id=puzzle1 />
+
+    </br></br></br>
+
+    <p>Загадка №2: Не ездок, а со шпорами, Не будильник, а всех будит.<p/><br>
+
+    <input type="text" id=puzzle2 />
+
+    </br></br></br>
+
+    <p>Загадка №3: Распускает хвост павлином, Ходит важным господином, По земле ногами - стук, Как зовут его - ...<p/><br>
+
+    <input type="text" id=puzzle3 />
+
+    </br></br></br>
+    <p>Загадка №4: Она красива и мила, А имя ей от слова "зола".<p/><br>
+
+    <input type="text" id=puzzle4 />
+    </br></br></br>
+    
+    <form>
+        <button onClick="checkAnswers()" class="myButton2"> Ответить </button>
+    </form>
+		
+        </div>
+	
+    </div>
+
+	
+    <div id="footer">
+	
+    Copyright © 2016 
+	
+    </div>
+
+
+</body>
+
+</html>
+
+
